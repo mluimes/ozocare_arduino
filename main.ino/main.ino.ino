@@ -22,7 +22,7 @@ void setup() {
    //
    Serial.println("Definiendo nombre como GTI-3A..." );
 
-   Bluefruit.setName("GTI-3A");
+   Bluefruit.setName("GTI-3X");
    Bluefruit.ScanResponse.addName();
 
    //
