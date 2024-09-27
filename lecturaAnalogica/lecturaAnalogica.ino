@@ -21,6 +21,8 @@ void loop() {
   float vRef = analogRead(pinRef);
 
   float voltios = abs((vGas - vRef) / pow(2, 10) * 3.3);
+  
+  float cGas = (vGas - vRef) / (-35,35 * 499 * pow(10, 6));
 
   Serial.print("vGas = ");
   Serial.println(vGas);  
@@ -28,6 +30,9 @@ void loop() {
   Serial.println(vRef);
   Seria.print("Voltios: ")
   Serial.println(voltios);
+  Serial.print("cGas = ");
+  Serial.print(cGas);
+  Serial.println(" ppm");
   Serial.println();
   Serial.println("---------------------------------");
   Serial.println("---------------------------------");
