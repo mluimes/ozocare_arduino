@@ -9,25 +9,28 @@ void setup() {
   while ( !Serial ) delay(10);
 
   Bluefruit.begin();
-  println("//()()()()()()()()()()()\\");
-  println("  Bluefruit inicializada");
-  println("\\()()()()()()()()()()()//");
-  println();
-  println();
+  Serial.println("//()()()()()()()()()()()\\");
+  Serial.println("  Bluefruit inicializada");
+  Serial.println("\\()()()()()()()()()()()//");
+  Serial.println();
+  Serial.println();
 }
 
 void loop() {
-  float vGas = AnalogRead(pinGas);
-  float vRef = AnalogRead(pinRef);
+  float vGas = analogRead(pinGas);
+  float vRef = analogRead(pinRef);
 
-  print("vGas: ");
-  println(vGas);  
-  print("vRef: ")
-  println(vRef);
-  println();
-  println("---------------------------------");
-  println("---------------------------------");
-  println();
+  float voltios = abs((vGas - vRef) / pow(2, 10) * 3.3);
+
+  Serial.print("vGas = ");
+  Serial.println(vGas);  
+  Serial.print("vRef = ");
+  Serial.println(vRef);
+  Seria.print("Voltios: ")
+  Serial.println(voltios);
+  Serial.println();
+  Serial.println("---------------------------------");
+  Serial.println("---------------------------------");
 
   delay(2000);
 }
