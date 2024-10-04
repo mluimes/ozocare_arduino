@@ -8,11 +8,11 @@
 
 // UUID for the beacon
 uint8_t beaconUUID[16] = {
-    'E', 'P', 'S', 'G', '-', 'G', 'T', 'I',
-    '-', 'P', 'R', 'O', 'Y', '-', '3', 'A'
+    'S', 'O', 'Y', '-', 'M', 'A', 'R', 'I',
+    'O', '-', 'L', 'O', 'L', 'A', 'S', 'O'
 };
 
-GasSensor gasSensor(pinGas, pinRef);
+SensorGas sensorGas(pinGas, pinRef);
 Beacon beacon("GTI-3X", beaconUUID);
 
 void setup() {
@@ -23,11 +23,11 @@ void setup() {
     Serial.println("Bluefruit inicializada");
     
     // Start advertising with initial cGas value
-    beacon.startAdvertising(0.0); // Start with a dummy value
+    beacon.empezarEmision(0.0); // Start with a dummy value
 }
 
 void loop() {
-    float cGas = gasSensor.readGasConcentration(); // Read gas concentration
+    float cGas = sensorGas.leerConcentracionGas(); // Read gas concentration
 
     // Print the values to the serial monitor
     Serial.print("cGas = ");
@@ -35,7 +35,7 @@ void loop() {
     Serial.println(" ppm");
 
     // Update beacon advertising with the new cGas value
-    beacon.startAdvertising(cGas);
+    beacon.empezarEmision(cGas);
 
-    delay(2000); // Wait before the next loop iteration
+    delay(500); // Wait before the next loop iteration
 }

@@ -3,10 +3,10 @@
 
 #include <Arduino.h>
 
-class GasSensor {
+class SensorGas {
 public:
-    GasSensor(int gasPin, int refPin);
-    float readGasConcentration();
+    SensorGas(int gasPin, int refPin);
+    float leerConcentracionGas();
 
 private:
     int pinGas;

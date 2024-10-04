@@ -1,9 +1,9 @@
 #include "SensorGas.h"
 #include <math.h>
 
-GasSensor::GasSensor(int gasPin, int refPin) : pinGas(gasPin), pinRef(refPin) {}
+SensorGas::SensorGas(int gasPin, int refPin) : pinGas(gasPin), pinRef(refPin) {}
 
-float GasSensor::readGasConcentration() {
+float SensorGas::leerConcentracionGas() {
     float vGas = analogRead(pinGas);
     float vRef = analogRead(pinRef);
 
@@ -11,7 +11,7 @@ float GasSensor::readGasConcentration() {
     float voltios = abs((vGas - vRef) / pow(2, 10) * 3.3);
 
     // Calcular conecntracion de gas (ppm)
-    float cGas = (vGas - vRef) / (-35.35 * 499 * pow(10, 6));
+    float cGas = abs(vGas - vRef) / (-35.35 * 499 * pow(10, 6));
     
     return cGas; // Devolver concentracion en ppm
 }
