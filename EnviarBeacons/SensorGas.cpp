@@ -1,3 +1,9 @@
+//------------------
+// SensorGas.cpp
+// Mario Luis Mesa
+// 28/09/2024
+//------------------
+
 #include "SensorGas.h"
 #include <math.h>
 

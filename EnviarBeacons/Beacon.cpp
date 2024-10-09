@@ -1,3 +1,9 @@
+//------------------
+// Beacon.cpp
+// Mario Luis Mesa
+// 28/09/2024
+//------------------
+
 #include "Beacon.h"
 
 Beacon::Beacon() {

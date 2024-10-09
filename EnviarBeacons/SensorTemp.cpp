@@ -1,3 +1,9 @@
+//------------------
+// SensorTemp.cpp
+// Mario Luis Mesa
+// 28/09/2024
+//------------------
+
 #include "SensorTemp.h"
 
 SensorTemp::SensorTemp(int tempPin) : pinTemp(tempPin) {}
