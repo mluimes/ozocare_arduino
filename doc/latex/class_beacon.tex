@@ -1,0 +1,67 @@
+\doxysection{Beacon Class Reference}
+\hypertarget{class_beacon}{}\label{class_beacon}\index{Beacon@{Beacon}}
+
+
+Clase de un \doxylink{class_beacon}{Beacon} de transmisión de datos.  
+
+
+
+
+{\ttfamily \#include $<$Beacon.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_beacon_a76583a73d3f865c472e562b33ae40f36}\label{class_beacon_a76583a73d3f865c472e562b33ae40f36} 
+{\bfseries Beacon} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_sensor_gas}{Sensor\+Gas}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_beacon_a3fc827a16da78817548e1fdec552f282}{definir\+Nombre}} (const char \texorpdfstring{$\ast$}{*}nombre)
+\begin{DoxyCompactList}\small\item\em Establece el nombre del \doxylink{class_beacon}{Beacon}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_beacon_a4ec405c63dc6f856f66d420cc2df9b8c}{empezar\+Emision}} (float c\+Gas, float temp)
+\begin{DoxyCompactList}\small\item\em Inicia la emisión del beacon con los valores de gas y temperatura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de un \doxylink{class_beacon}{Beacon} de transmisión de datos. 
+
+Esta clase se encarga de la configuración y transmisión de datos usando un beacon. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_beacon_a3fc827a16da78817548e1fdec552f282}\index{Beacon@{Beacon}!definirNombre@{definirNombre}}
+\index{definirNombre@{definirNombre}!Beacon@{Beacon}}
+\doxysubsubsection{\texorpdfstring{definirNombre()}{definirNombre()}}
+{\footnotesize\ttfamily \label{class_beacon_a3fc827a16da78817548e1fdec552f282} 
+void Beacon\+::definir\+Nombre (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{nombre}{}\end{DoxyParamCaption})}
+
+
+
+Establece el nombre del \doxylink{class_beacon}{Beacon}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & El nombre que se le asignará al \doxylink{class_beacon}{Beacon}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_beacon_a4ec405c63dc6f856f66d420cc2df9b8c}\index{Beacon@{Beacon}!empezarEmision@{empezarEmision}}
+\index{empezarEmision@{empezarEmision}!Beacon@{Beacon}}
+\doxysubsubsection{\texorpdfstring{empezarEmision()}{empezarEmision()}}
+{\footnotesize\ttfamily \label{class_beacon_a4ec405c63dc6f856f66d420cc2df9b8c} 
+void Beacon\+::empezar\+Emision (\begin{DoxyParamCaption}\item[{float}]{c\+Gas}{, }\item[{float}]{temp}{}\end{DoxyParamCaption})}
+
+
+
+Inicia la emisión del beacon con los valores de gas y temperatura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em concentracion\+Gas} & Concentración de gas en partes por millón (ppm). \\
+\hline
+{\em temperatura} & Temperatura en grados Celsius. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Enviar\+Beacons/\mbox{\hyperlink{_beacon_8h}{Beacon.\+h}}\item 
+Enviar\+Beacons/Beacon.\+cpp\end{DoxyCompactItemize}

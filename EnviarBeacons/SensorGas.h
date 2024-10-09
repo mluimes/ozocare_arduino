@@ -1,5 +1,5 @@
+/**@file SensorGas.h */
 //------------------
-// SensorGas.h
 // Mario Luis Mesa
 // 28/09/2024
 //------------------

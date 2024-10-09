@@ -1,5 +1,5 @@
+/**@file Beacon.h */
 //------------------
-// SensorTemp.h
 // Mario Luis Mesa
 // 28/09/2024
 //------------------

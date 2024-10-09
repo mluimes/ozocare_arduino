@@ -1,0 +1,67 @@
+\doxysection{Sensor\+Temp Class Reference}
+\hypertarget{class_sensor_temp}{}\label{class_sensor_temp}\index{SensorTemp@{SensorTemp}}
+
+
+Clase que representa un sensor de temperatura.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Temp.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_temp_af946555c900e8d8cf37cc9e934e0b9fd}{Sensor\+Temp}} (int temp\+Pin)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_sensor_temp}{Sensor\+Temp}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sensor_temp_a66571cc5d7cab209fab8ebd729ad5593}{leer\+Temperatura}} ()
+\begin{DoxyCompactList}\small\item\em Lee la temperatura ambiente detectada por el sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa un sensor de temperatura. 
+
+La clase \doxylink{class_sensor_temp}{Sensor\+Temp} se encarga de manejar la lectura del sensor de temperatura conectado a un pin específico de la placa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sensor_temp_af946555c900e8d8cf37cc9e934e0b9fd}\index{SensorTemp@{SensorTemp}!SensorTemp@{SensorTemp}}
+\index{SensorTemp@{SensorTemp}!SensorTemp@{SensorTemp}}
+\doxysubsubsection{\texorpdfstring{SensorTemp()}{SensorTemp()}}
+{\footnotesize\ttfamily \label{class_sensor_temp_af946555c900e8d8cf37cc9e934e0b9fd} 
+Sensor\+Temp\+::\+Sensor\+Temp (\begin{DoxyParamCaption}\item[{int}]{temp\+Pin}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_sensor_temp}{Sensor\+Temp}. 
+
+Inicializa el sensor de temperatura, especificando el pin al que está conectado.
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp\+Pin} & Pin donde está conectado el sensor de temperatura. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sensor_temp_a66571cc5d7cab209fab8ebd729ad5593}\index{SensorTemp@{SensorTemp}!leerTemperatura@{leerTemperatura}}
+\index{leerTemperatura@{leerTemperatura}!SensorTemp@{SensorTemp}}
+\doxysubsubsection{\texorpdfstring{leerTemperatura()}{leerTemperatura()}}
+{\footnotesize\ttfamily \label{class_sensor_temp_a66571cc5d7cab209fab8ebd729ad5593} 
+float Sensor\+Temp\+::leer\+Temperatura (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lee la temperatura ambiente detectada por el sensor. 
+
+Realiza una lectura del valor analógico del sensor y lo convierte en grados Celsius.
+
+\begin{DoxyReturn}{Returns}
+La temperatura en grados Celsius. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Enviar\+Beacons/Sensor\+Temp.\+h\item 
+Enviar\+Beacons/Sensor\+Temp.\+cpp\end{DoxyCompactItemize}

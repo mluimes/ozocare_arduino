@@ -1,0 +1,77 @@
+\doxysection{Enviar\+Beacons/\+Enviar\+Beacons.ino File Reference}
+\hypertarget{_enviar_beacons_8ino}{}\label{_enviar_beacons_8ino}\index{EnviarBeacons/EnviarBeacons.ino@{EnviarBeacons/EnviarBeacons.ino}}
+
+
+Descripción breve de lo que hace este archivo.  
+
+
+{\ttfamily \#include $<$bluefruit.\+h$>$}\newline
+{\ttfamily \#include "{}Sensor\+Gas.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+Temp.\+h"{}}\newline
+{\ttfamily \#include "{}Beacon.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_enviar_beacons_8ino_a6dfe92f11a1f7b3fe4a0736b8cca7cb2}\label{_enviar_beacons_8ino_a6dfe92f11a1f7b3fe4a0736b8cca7cb2} 
+\#define {\bfseries pin\+Gas}~5
+\begin{DoxyCompactList}\small\item\em Pins sparkfun. \end{DoxyCompactList}\item 
+\Hypertarget{_enviar_beacons_8ino_ad55d72562d9a8e920d956cb3f73de5bd}\label{_enviar_beacons_8ino_ad55d72562d9a8e920d956cb3f73de5bd} 
+\#define {\bfseries pin\+Ref}~28
+\item 
+\Hypertarget{_enviar_beacons_8ino_acefd3ef871fff6abf45893337015b0d8}\label{_enviar_beacons_8ino_acefd3ef871fff6abf45893337015b0d8} 
+\#define {\bfseries pin\+Temp}~29
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_enviar_beacons_8ino_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Función de configuración inicial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enviar_beacons_8ino_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Función principal que se ejecuta en bucle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_enviar_beacons_8ino_a3739bf7eefaed5bf5c1fe51c59f823de}\label{_enviar_beacons_8ino_a3739bf7eefaed5bf5c1fe51c59f823de} 
+float {\bfseries c\+Gas}
+\begin{DoxyCompactList}\small\item\em Variables. \end{DoxyCompactList}\item 
+\Hypertarget{_enviar_beacons_8ino_a24d61a35b72d7299eb6b5f48e71a571b}\label{_enviar_beacons_8ino_a24d61a35b72d7299eb6b5f48e71a571b} 
+float {\bfseries temp}
+\item 
+\Hypertarget{_enviar_beacons_8ino_a0b87cc69ec9cee6775b21a572930ebc8}\label{_enviar_beacons_8ino_a0b87cc69ec9cee6775b21a572930ebc8} 
+\mbox{\hyperlink{class_sensor_gas}{Sensor\+Gas}} {\bfseries sensor\+Gas} (\mbox{\hyperlink{_enviar_beacons_8ino_a6dfe92f11a1f7b3fe4a0736b8cca7cb2}{pin\+Gas}}, pin\+Ref)
+\begin{DoxyCompactList}\small\item\em Objetos de sensores. \end{DoxyCompactList}\item 
+\Hypertarget{_enviar_beacons_8ino_abf3c71d31fa7d1b6740e948579e5c675}\label{_enviar_beacons_8ino_abf3c71d31fa7d1b6740e948579e5c675} 
+\mbox{\hyperlink{class_sensor_temp}{Sensor\+Temp}} {\bfseries sensor\+Temp} (pin\+Temp)
+\item 
+\Hypertarget{_enviar_beacons_8ino_acfa2a910909c8ed4a62985bb94ff6905}\label{_enviar_beacons_8ino_acfa2a910909c8ed4a62985bb94ff6905} 
+\mbox{\hyperlink{class_beacon}{Beacon}} {\bfseries beacon}
+\begin{DoxyCompactList}\small\item\em Objeto beacon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Descripción breve de lo que hace este archivo. 
+
+Este archivo contiene el código principal de la aplicación Arduino, que lee valores de un sensor de gas y un sensor de temperatura, y transmite estos valores mediante un beacon. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_enviar_beacons_8ino_afe461d27b9c48d5921c00d521181f12f}\index{EnviarBeacons.ino@{EnviarBeacons.ino}!loop@{loop}}
+\index{loop@{loop}!EnviarBeacons.ino@{EnviarBeacons.ino}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{_enviar_beacons_8ino_afe461d27b9c48d5921c00d521181f12f} 
+void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Función principal que se ejecuta en bucle. 
+
+En este bucle se leen los valores del sensor de gas y temperatura en cada iteración, se imprimen por consola y se espera 3 segundos antes de la siguiente lectura. \Hypertarget{_enviar_beacons_8ino_a4fc01d736fe50cf5b977f755b675f11d}\index{EnviarBeacons.ino@{EnviarBeacons.ino}!setup@{setup}}
+\index{setup@{setup}!EnviarBeacons.ino@{EnviarBeacons.ino}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{_enviar_beacons_8ino_a4fc01d736fe50cf5b977f755b675f11d} 
+void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Función de configuración inicial. 
+
+Se inicializa la comunicación serial, se configuran los sensores de gas y temperatura, y se establece la comunicación con el beacon. También se lee una vez los valores de gas y temperatura antes de comenzar la emisión del beacon. 

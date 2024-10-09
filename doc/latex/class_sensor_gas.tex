@@ -1,0 +1,65 @@
+\doxysection{Sensor\+Gas Class Reference}
+\hypertarget{class_sensor_gas}{}\label{class_sensor_gas}\index{SensorGas@{SensorGas}}
+
+
+Clase que maneja el sensor de gas.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Gas.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sensor_gas_a587de77c256d384c322b3bd60e04f448}{Sensor\+Gas}} (int gas\+Pin, int ref\+Pin)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_sensor_gas}{Sensor\+Gas}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_sensor_gas_afb63034b0831d70a6ab801be5e6ec841}{leer\+Concentracion\+Gas}} ()
+\begin{DoxyCompactList}\small\item\em Lee la concentración de gas detectada por el sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que maneja el sensor de gas. 
+
+Esta clase se encarga de las lecturas del sensor de gas y realizar cálculos relacionados con la concentración de gas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_sensor_gas_a587de77c256d384c322b3bd60e04f448}\index{SensorGas@{SensorGas}!SensorGas@{SensorGas}}
+\index{SensorGas@{SensorGas}!SensorGas@{SensorGas}}
+\doxysubsubsection{\texorpdfstring{SensorGas()}{SensorGas()}}
+{\footnotesize\ttfamily \label{class_sensor_gas_a587de77c256d384c322b3bd60e04f448} 
+Sensor\+Gas\+::\+Sensor\+Gas (\begin{DoxyParamCaption}\item[{int}]{gas\+Pin}{, }\item[{int}]{ref\+Pin}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \doxylink{class_sensor_gas}{Sensor\+Gas}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin\+Gas} & Pin donde está conectado el sensor de gas. \\
+\hline
+{\em pin\+Ref} & Pin de referencia para el sensor de gas. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sensor_gas_afb63034b0831d70a6ab801be5e6ec841}\index{SensorGas@{SensorGas}!leerConcentracionGas@{leerConcentracionGas}}
+\index{leerConcentracionGas@{leerConcentracionGas}!SensorGas@{SensorGas}}
+\doxysubsubsection{\texorpdfstring{leerConcentracionGas()}{leerConcentracionGas()}}
+{\footnotesize\ttfamily \label{class_sensor_gas_afb63034b0831d70a6ab801be5e6ec841} 
+float Sensor\+Gas\+::leer\+Concentracion\+Gas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Lee la concentración de gas detectada por el sensor. 
+
+\begin{DoxyReturn}{Returns}
+La concentración de gas en partes por millón (ppm). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Enviar\+Beacons/\mbox{\hyperlink{_sensor_gas_8h}{Sensor\+Gas.\+h}}\item 
+Enviar\+Beacons/Sensor\+Gas.\+cpp\end{DoxyCompactItemize}
