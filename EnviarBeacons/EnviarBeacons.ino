@@ -23,7 +23,13 @@ void setup() {
     Serial.println("Bluefruit inicializada");
     
     beacon.definirNombre("GTI-3X");
-    beacon.empezarEmision(cGas, temp); // Start with a dummy value
+
+    // leemos una vez antes de empezar emision
+    cGas = sensorGas.leerConcentracionGas(); 
+    temp = sensorTemp.leerTemperatura();
+
+    // empezamos a emitir
+    beacon.empezarEmision(cGas, temp); 
 }
 
 void loop() {
@@ -40,5 +46,5 @@ void loop() {
     Serial.println("ºC");
     Serial.println("///////////");
 
-    delay(10000); // Wait before the next loop iteration
+    delay(3000); // Wait before the next loop iteration
 }

@@ -14,7 +14,7 @@ float SensorGas::leerConcentracionGas() {
     float cGas = abs(vGas - vRef) / (-35.35 * 499 * pow(10, 6));
 
     // Implementacion funcion de calibrado
-    cGas = (cGas - 3.955) / 1.69;
+    float res = (cGas - 3.955) / 1.69;
     
-    return cGas; // Devolver concentracion en ppm
+    return res; // Devolver concentracion en ppm
 }

@@ -28,7 +28,7 @@ void Beacon::empezarEmision(float cGas, float temp) {
     'S', 'O', 'Y', '-', 'M', 'A', 'R', 'I',
     'O', '-', 'L', 'O', 'L', 'A', 'S', 'O'
   };
-  BLEBeacon elBeacon(beaconUUID, (cGas * 100), temp, 0);
+  BLEBeacon elBeacon(beaconUUID, (int)(cGas * 100), (int)(temp * 100), 0);
   elBeacon.setManufacturer(0x004C);  // Apple ID
   Bluefruit.Advertising.setBeacon(elBeacon);
 
