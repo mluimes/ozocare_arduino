@@ -10,8 +10,11 @@ float SensorGas::leerConcentracionGas() {
     // Convertir analogico a voltage
     float voltios = abs((vGas - vRef) / pow(2, 10) * 3.3);
 
-    // Calcular conecntracion de gas (ppm)
+    // Calcular concentracion de gas (ppm)
     float cGas = abs(vGas - vRef) / (-35.35 * 499 * pow(10, 6));
+
+    // Implementacion funcion de calibrado
+    cGas = (cGas - 3.955) / 1.69;
     
     return cGas; // Devolver concentracion en ppm
 }

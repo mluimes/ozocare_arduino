@@ -1,19 +1,19 @@
 #include <bluefruit.h>
 #include "SensorGas.h"
+#include "SensorTemp.h"
 #include "Beacon.h"
 
 #define pinGas 5
 #define pinRef 28
-// #define pinTemp 29
+#define pinTemp 29
 
-// UUID for the beacon
-uint8_t beaconUUID[16] = {
-    'S', 'O', 'Y', '-', 'M', 'A', 'R', 'I',
-    'O', '-', 'L', 'O', 'L', 'A', 'S', 'O'
-};
+float cGas;
+float temp;
+
 
 SensorGas sensorGas(pinGas, pinRef);
-Beacon beacon("GTI-3X", beaconUUID);
+SensorTemp sensorTemp(pinTemp);
+Beacon beacon;
 
 void setup() {
     Serial.begin(115200);
@@ -22,20 +22,23 @@ void setup() {
     Bluefruit.begin();
     Serial.println("Bluefruit inicializada");
     
-    // Start advertising with initial cGas value
-    beacon.empezarEmision(0.0); // Start with a dummy value
+    beacon.definirNombre("GTI-3X");
+    beacon.empezarEmision(cGas, temp); // Start with a dummy value
 }
 
 void loop() {
-    float cGas = sensorGas.leerConcentracionGas(); // Read gas concentration
+    // Leemos gas y temperatura
+    cGas = sensorGas.leerConcentracionGas(); 
+    temp = sensorTemp.leerTemperatura();
 
-    // Print the values to the serial monitor
+    // Imprimir en Serial
     Serial.print("cGas = ");
     Serial.print(cGas);
     Serial.println(" ppm");
+    Serial.print("temp = ");
+    Serial.print(temp);
+    Serial.println("ºC");
+    Serial.println("///////////");
 
-    // Update beacon advertising with the new cGas value
-    beacon.empezarEmision(cGas);
-
-    delay(500); // Wait before the next loop iteration
+    delay(10000); // Wait before the next loop iteration
 }

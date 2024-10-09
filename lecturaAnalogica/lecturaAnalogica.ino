@@ -28,7 +28,7 @@ void loop() {
   Serial.println(vGas);  
   Serial.print("vRef = ");
   Serial.println(vRef);
-  Seria.print("Voltios: ")
+  Serial.print("Voltios: ");
   Serial.println(voltios);
   Serial.print("cGas = ");
   Serial.print(cGas);

@@ -5,12 +5,10 @@
 
 class Beacon {
 public:
-    Beacon(const char* nombre, const uint8_t* uuid);
-    void empezarEmision(float cGas);
+  Beacon();
 
-private:
-    const char* nombreDispositivo;
-    uint8_t beaconUUID[16];
+  void definirNombre(const char* nombre);
+  void empezarEmision(float cGas, float temp);
 };
 
 #endif
